@@ -1,1 +1,17 @@
 # divorce_rates_project
+
+Kazakhstan reported the second highest divorce rates in 2021 after the Maldives. This exploratory data analysis (EDA) will look at the divorce data from the World Population Review and see if there are determinants of divorce. Additional data was collected from UN sites and Kaggle and from my previous EDAs on happiness and gender inequality index (GII). These additional data provided information about health, population, education, labor, economics and political and geography indicators. 
+
+Data review and correlations:
+
+The initial dataset contained information about population size, its growth from previous year, area size, density and the divorce rate itself. The gender inequality index data contained human development groups, maternal mortality, adolescent birth rate, share of seats in the parliament held by women and labor and secondary education data by gender. The happiness report had happiness scores, GDP per capita, social support, freedom to make life choices and perception of corruption. I also added data on household size as a proxi for one of the reasons mentioned in a report from Kazakhstan that involvement of relatives is the main reason for divorce. 
+
+The correlation analysis showed no strong linear correlation with any of the determinants included in the joint dataset. Of the ones that were stronger included several: the countries that reported higher divorce rates also reported lower gender inequalities, lower male labor force, lower maternal mortality and adolescent birth rate and higher GDP and higher education by both genders. By human development group, the countries in higher development groups had higher divorce rates. 
+
+For machine learning, the Random Forest algorithm was used to see each feature importance in predicting divorce rates and for predicting divorce rates for countries. In the random forest algorithm, GII, labor force rates for both genders, population growth rate and female secondary education were the five most important features for divorce rate. In Shapley values methodology, female labor force, gender inequality index, male secondary education, freedom to make life choices and happiness score were among the five strongest influencing factors of the divorce rate. Using Shapley Values methodology, the predicted divorce rate was 2.64 with all other features remaining the same. 
+
+For visualization I used bar charts to show the divorce rates by region with other features such as marriage rate, GII (increase by 10 for visualization purposes), happiness score and household size. The divorce rate was sorted in descending order. CIS countries had the highest rate and the LAC region had the lowest rate. By region, marriage rate, labor force rates for both genders lose their importance and secondary education rates are important predictors of divorce (from correlation table by region). 
+
+The stacked and percent stacked bar charts demonstrate divorce rate as a percentage of marriage rates by geographic regions. By region, CIS country region has the highest divorce rate by as percent of marriage it is the third highest. 
+
+Limitations: when analyzed by human development groupings, the data for low human development index was absent in the divorce rates data. Since the divorce rate data was the initial dataset that was merged with other data, this region was not included in the whole analysis. In addition, other research shows that divorce rate in Kazakhstan was lower in Kazakhstan in 2021 but I used the World Population report data for this EDA. 
